@@ -4,7 +4,7 @@
 
     <groupId>com.github.connyscode.ctils</groupId>
     <artifactId>jtrack</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4-SNAPSHOT</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A application used as an example on how to set up pushing
         its components to the Central Repository.
@@ -121,7 +121,7 @@
         <connection>scm:git:ssh://git@github.com/ConnysCode/jTrack.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/ConnysCode/jTrack.git</developerConnection>
         <url>https://github.com/connyscode/jtrack</url>
-      <tag>jtrack-1.0.3</tag>
+      <tag>jtrack-1.0.2</tag>
   </scm>
 
     <licenses>
