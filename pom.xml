@@ -4,7 +4,7 @@
 
     <groupId>com.github.connyscode.ctils</groupId>
     <artifactId>jtrack</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3-SNAPSHOT</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A application used as an example on how to set up pushing
         its components to the Central Repository.
