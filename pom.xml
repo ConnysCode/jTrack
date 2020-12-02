@@ -121,7 +121,7 @@
         <connection>scm:git:ssh://git@github.com/ConnysCode/jTrack.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/ConnysCode/jTrack.git</developerConnection>
         <url>https://github.com/connyscode/jtrack</url>
-      <tag>Test Tag for Test 1.0.4</tag>
+      <tag>jtrack-1.0.4</tag>
   </scm>
 
     <licenses>
