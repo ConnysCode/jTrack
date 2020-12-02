@@ -119,7 +119,7 @@
 
 
     <scm>
-        <connection>scm:git:git://github.com/connyscode/jtrack.git</connection>
+        <connection>scm:git:ssh://git@github.com/connyscode/jtrack.git</connection>
         <developerConnection>scm:git:ssh://github.com/connyscode/jtrack.git</developerConnection>
         <url>https://github.com/connyscode/jtrack</url>
       <tag>jtrack-1.0.2</tag>
