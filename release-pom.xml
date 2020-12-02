@@ -25,7 +25,8 @@
   </developers>
   <scm>
     <connection>scm:git:git://github.com/connyscode/jtrack.git</connection>
-    <developerConnection>scm:git:ssh://github.com:connyscode/jtrack.git</developerConnection>
+    <developerConnection>scm:git:ssh://github.com/connyscode/jtrack.git</developerConnection>
+    <tag>jtrack-1.0.2</tag>
     <url>https://github.com/connyscode/jtrack</url>
   </scm>
   <distributionManagement>
@@ -100,6 +101,7 @@
           <goals>deploy</goals>
           <checkModificationExcludes>
             <checkModificationExclude>pom.xml</checkModificationExclude>
+            <checkModificationExclude>release-pom.xml</checkModificationExclude>
           </checkModificationExcludes>
         </configuration>
       </plugin>
