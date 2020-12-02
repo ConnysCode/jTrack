@@ -29,3 +29,4 @@ target/
 *.iml
 pom.xml.versionsBackup
 pom_nah.famxml
+release-pom.xml
