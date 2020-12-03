@@ -1,7 +1,6 @@
-package com.github.connyscode.jTrack.backend;
+package com.github.connyscode.ctils.jTrack.backend;
 
 
-import com.github.connyscode.jTrack.backend.types.TrackSearchCluster;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 

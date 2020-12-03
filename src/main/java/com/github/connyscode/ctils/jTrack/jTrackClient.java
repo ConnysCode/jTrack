@@ -1,7 +1,8 @@
-package com.github.connyscode.jTrack;
+package com.github.connyscode.ctils.jTrack;
 
-import com.github.connyscode.jTrack.backend.types.TrackSearchCluster;
-import com.github.connyscode.jTrack.backend.types.SearchResult;
+import com.github.connyscode.ctils.jTrack.backend.Messaging;
+import com.github.connyscode.ctils.jTrack.backend.types.TrackSearchCluster;
+import com.github.connyscode.ctils.jTrack.backend.types.SearchResult;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -10,9 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.github.connyscode.jTrack.backend.Messaging.error;
-import static com.github.connyscode.jTrack.backend.Messaging.info;
-import static com.github.connyscode.jTrack.backend.jSoupUtils.getDoc;
+import static com.github.connyscode.ctils.jTrack.backend.jSoupUtils.getDoc;
 
 public class jTrackClient {
 
@@ -60,14 +59,14 @@ public class jTrackClient {
             doc = getDoc(useURL.toString());
 
             if (doc == null) {
-                error("L6", "Could not read document! Please check your connection!");
+                Messaging.error("L6", "Could not read document! Please check your connection!");
                 searchResults.add(new SearchResult(false));
                 return searchResults;
             }
 
             Elements songCards = doc.select(".text-left.visitedlyr");
             int end = Math.min(songCards.size(), 5);
-            info("Song-Search powered by www.azlyrics.com!");
+            Messaging.info("Song-Search powered by www.azlyrics.com!");
             for (int i = 0; i < end; i++) {
                 Element songCard = songCards.get(i);
                 searchResults.add(new SearchResult(
@@ -79,11 +78,11 @@ public class jTrackClient {
             return searchResults;
         } catch (IOException e) {
             searchResults.add(new SearchResult(false));
-            error("L7-IO", "Fetching of >" + useURL + "< was unsuccessful! Check your connection! If the error persists, please open an issue on GitHub!");
+            Messaging.error("L7-IO", "Fetching of >" + useURL + "< was unsuccessful! Check your connection! If the error persists, please open an issue on GitHub!");
             return searchResults;
         } catch (IndexOutOfBoundsException e) {
             searchResults.add(new SearchResult(false));
-            error("L7-IOOB", "Well that should not have happened.. If the error persists, please open an issue on GitHub!");
+            Messaging.error("L7-IOOB", "Well that should not have happened.. If the error persists, please open an issue on GitHub!");
             return searchResults;
         }
     }
@@ -95,7 +94,7 @@ public class jTrackClient {
             doc = getDoc(useURL);
 
             if (doc == null) {
-                error("L3", "Could not read document! Please check your connection!");
+                Messaging.error("L3", "Could not read document! Please check your connection!");
                 return new Track("", "", "", "", "www.azlyrics.com");
             }
 
@@ -103,13 +102,13 @@ public class jTrackClient {
 
             String lyrics = songLyricsPit.get(5).html().replaceAll("<br>", "").replaceAll("<!--(.*?)-->", "");
 
-            info("[jTrack] Song-Data of \"" + searchResult.songTitle + "\" powered by www.azlyrics.com!");
+            Messaging.info("[jTrack] Song-Data of \"" + searchResult.songTitle + "\" powered by www.azlyrics.com!");
             return new Track(searchResult.songTitle, searchResult.songAuthor, lyrics, searchResult.songUrl, "www.azlyrics.com");
         } catch (IOException e) {
-            error("L5-IO", "Fetching of >" + searchResult.songUrl + "< was unsuccessful! Check your connection! If the error persists, please open an issue on GitHub!");
+            Messaging.error("L5-IO", "Fetching of >" + searchResult.songUrl + "< was unsuccessful! Check your connection! If the error persists, please open an issue on GitHub!");
             return new Track("", "", "", "", "www.azlyrics.com");
         } catch (IndexOutOfBoundsException e) {
-            error("L5-IOOB", "Well that should not have happened.. If the error persists, please open an issue on GitHub!");
+            Messaging.error("L5-IOOB", "Well that should not have happened.. If the error persists, please open an issue on GitHub!");
             return new Track("", "", "", "", "www.azlyrics.com");
         }
     }
@@ -126,7 +125,7 @@ public class jTrackClient {
         if (result.wasSuccessful()) {
             return GetTrackDetails(result);
         } else {
-            error("L4", "SearchResult was unsuccessful! Please try again.");
+            Messaging.error("L4", "SearchResult was unsuccessful! Please try again.");
             return new Track();
         }
     }
@@ -143,7 +142,7 @@ public class jTrackClient {
         if (result.get(index).wasSuccessful()) {
             return GetTrackDetails(result.get(index));
         } else {
-            error("L4", "SearchResult was unsuccessful! Please try again.");
+            Messaging.error("L4", "SearchResult was unsuccessful! Please try again.");
             return new Track();
         }
     }
@@ -160,7 +159,7 @@ public class jTrackClient {
         if (result.get(0).wasSuccessful()) {
             return GetTrackDetails(result.get(0));
         } else {
-            error("L4", "SearchResult was unsuccessful! Please try again.");
+            Messaging.error("L4", "SearchResult was unsuccessful! Please try again.");
             return new Track();
         }
     }

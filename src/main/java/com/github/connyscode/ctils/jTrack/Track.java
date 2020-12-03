@@ -1,6 +1,4 @@
-package com.github.connyscode.jTrack;
-
-import com.github.connyscode.jTrack.backend.types.TrackSearchCluster;
+package com.github.connyscode.ctils.jTrack;
 
 public class Track {
 

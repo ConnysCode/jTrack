@@ -1,4 +1,4 @@
-package com.github.connyscode.jTrack.backend.types;
+package com.github.connyscode.ctils.jTrack.backend.types;
 
 public final class TrackSearchCluster
 {
