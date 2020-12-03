@@ -4,7 +4,7 @@
 
     <groupId>com.github.connyscode.ctils</groupId>
     <artifactId>jtrack</artifactId>
-    <version>1.0.5.1</version>
+    <version>1.0.5.2-SNAPSHOT</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>yes.
     </description>
