@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.connyscode.ctils</groupId>
     <artifactId>jtrack</artifactId>
-    <version>1.0.5-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>A application used as an example on how to set up pushing
-        its components to the Central Repository.
+    <description>yes.
     </description>
     <url>https://github.com/ConnysCode/jTrack</url>
 
     <developers>
         <developer>
-            <name>Morian Engelhardt</name>
+            <name>ConCode</name>
             <email>concode@outlook.de</email>
             <organization>com.github.connyscode</organization>
             <organizationUrl>https://github.com/ConnysCode</organizationUrl>
         </developer>
     </developers>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
+    <scm>
+        <connection>scm:git:ssh://git@github.com/ConnysCode/jTrack.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/ConnysCode/jTrack.git</developerConnection>
+        <url>https://github.com/connyscode/jtrack</url>
+        <tag>Test Tag for Test 1.0.4</tag>
+    </scm>
 
     <build>
         <plugins>
@@ -41,7 +37,6 @@
                     <target>8</target>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -97,6 +92,7 @@
                 </executions>
             </plugin>
             <!--Automatic Jar and Javadoc File Generation-->
+
             <!--The Maven GPG plugin is used to sign the components with the following configuration-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -116,13 +112,16 @@
         </plugins>
     </build>
 
-
-    <scm>
-        <connection>scm:git:ssh://git@github.com/ConnysCode/jTrack.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/ConnysCode/jTrack.git</developerConnection>
-        <url>https://github.com/connyscode/jtrack</url>
-      <tag>Test Tag for Test 1.0.4</tag>
-  </scm>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
     <licenses>
         <license>
@@ -130,5 +129,14 @@
             <url>http://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
+
+    <dependencies>
+        <dependency>
+            <!-- jsoup HTML parser library @ https://jsoup.org/ -->
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+    </dependencies>
 
 </project>
