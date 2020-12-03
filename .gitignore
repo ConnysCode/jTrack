@@ -30,3 +30,4 @@ target/
 pom.xml.versionsBackup
 pom_nah.famxml
 release-pom.xml
+release.properties
