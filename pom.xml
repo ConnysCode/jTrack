@@ -23,7 +23,7 @@
         <connection>scm:git:ssh://git@github.com/ConnysCode/jTrack.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/ConnysCode/jTrack.git</developerConnection>
         <url>https://github.com/connyscode/jtrack</url>
-        <tag>jtrack-1.0.6</tag>
+        <tag>jtrack-1.0.6r</tag>
     </scm>
 
     <build>
