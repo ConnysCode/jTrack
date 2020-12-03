@@ -15,10 +15,9 @@ Titles, Authors, Lyrics,...
 ```Java
 jTrackClient client = new jTrackClient();
 List<SearchResult> searchResults = client.performSearch("Gimme! Gimme! Gimme!");
-// List<SearchResult> searchResults = client.performSearch("ABBA", "Gimme"); -> More specific
+
 Track track = client.getTrack(searchResults);
 System.out.println(track.songText());
-System.out.println(track.songArtist());
 ```
 
 <br>
