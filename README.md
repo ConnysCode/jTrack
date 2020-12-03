@@ -7,7 +7,7 @@
 # jTrack
 
 jTrack is a small and powerful library for collecting data of tracks.  
-Titles, Authors, Lyrics,... All in one library  
+Titles, Authors, Lyrics,...
 
 
 ## How to use
@@ -20,6 +20,8 @@ Track track = client.getTrack(searchResults);
 System.out.println(track.songText());
 System.out.println(track.songArtist());
 ```
+
+<br>
 
 ## Some tips
 ### Perform Search
