@@ -1,6 +1,6 @@
 <div align="center">
-<img alt="Maven Central" src="https://img.shields.io/maven-central/v/com.github.connyscode.ctils/jtrack?style=for-the-badge">
-<img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2020?style=for-the-badge">
+<a href="https://search.maven.org/search?q=g:com.github.connyscode.ctils"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/com.github.connyscode.ctils/jtrack?style=for-the-badge"></a>
+    <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2020?style=for-the-badge">
 <img alt="GitHub" src="https://img.shields.io/github/license/connyscode/jtrack?style=for-the-badge">
 </div>
 
