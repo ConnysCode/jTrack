@@ -1,3 +1,4 @@
+
 <div align="center">
 <a href="https://search.maven.org/search?q=g:com.github.connyscode.ctils"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/com.github.connyscode.ctils/jtrack?style=for-the-badge"></a>
     <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2020?style=for-the-badge">
@@ -5,6 +6,55 @@
 </div>
 
 # jTrack
+
+jTrack is a small and simple Java api to access information about tracks and artists from the Genius service.<br>
+Titles, Authors, Lyrics,...
+
+
+## How to use
+To use jTrack you need a Genius API Client and an ``ACCESS_TOKEN``. You can generate this [here](https://genius.com/api-clients/new).<br>
+After you created an API Client, you need to generate an ``ACCESS_TOKEN``! Do not give this token to anyone.
+> ``ICON URL``, ``APP WEBSITE URL`` and ``REDIRECT URI`` are not important.
+### Create a jTrackClient
+```Java
+jTrackClient client = new jTrackClient("ACCESS_TOKEN");
+List<SearchResult> searchResults = client.performSongSearch("Die Coolsten!");
+```
+
+### Read a Track
+```Java
+Track track = client.getSong(searchResults.get(0));
+System.out.println(track.songLyrics()); // Prints the Lyrics
+System.out.println(track.songName()); // Prints the Song's Name
+```
+
+### Read an Artist
+```Java
+Artist artist = client.getSong(1648251);
+Artist artist = client.getSong(track.artistGID());
+System.out.println(track.artistName()); // Prints the Artist's Name
+System.out.println(track.artistDescription()); // Prints the Artist's Description
+```
+
+
+
+## Installation
+
+jTrack is a part of the Maven Central Repository. So you can easily use jTrack by adding this to your dependencies:
+
+```xml
+<dependency>
+    <!-- jTrack - Collecting Track Data @ https://github.com/ConnysCode/jTrack -->
+    <groupId>com.github.connyscode.ctils</groupId>
+    <artifactId>jtrack</artifactId>
+        <version>version</version>
+</dependency>
+```
+![Maven Central](https://img.shields.io/maven-central/v/com.github.connyscode.ctils/jtrack)
+
+<br><br>
+
+# jTrack 1.0.5.1 and lower
 
 jTrack is a small and powerful library for collecting data of tracks.  
 Titles, Authors, Lyrics,...
@@ -44,20 +94,5 @@ track = client.getTrack(searchResults.get(1));  // "Gimme! Gimme! Gimme! (A Man 
 track = client.getTrack(searchResults, 2);      // "Gimme Gimme Gimme"
 ```
 > All of these three functions do the same thing, but are here to give you the best and fastest solution depending on your particular situation.
-
-## Installation
-
-jTrack is a part of the Maven Central Repository. So you can easily use jTrack by adding this to your dependencies:
-
-```xml
-<dependency>
-    <!-- jTrack - Collecting Track Data @ https://github.com/ConnysCode/jTrack -->
-    <groupId>com.github.connyscode.ctils</groupId>
-    <artifactId>jtrack</artifactId>
-        <version>version</version>
-</dependency>
-```
-![Maven Central](https://img.shields.io/maven-central/v/com.github.connyscode.ctils/jtrack)
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
