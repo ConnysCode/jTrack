@@ -36,8 +36,6 @@ System.out.println(track.artistName()); // Prints the Artist's Name
 System.out.println(track.artistDescription()); // Prints the Artist's Description
 ```
 
-
-
 ## Installation
 
 jTrack is a part of the Maven Central Repository. So you can easily use jTrack by adding this to your dependencies:
@@ -93,6 +91,18 @@ track = client.getTrack(searchResults);         // "Gimme What I Want"
 track = client.getTrack(searchResults.get(1));  // "Gimme! Gimme! Gimme! (A Man After Midnight)"
 track = client.getTrack(searchResults, 2);      // "Gimme Gimme Gimme"
 ```
-> All of these three functions do the same thing, but are here to give you the best and fastest solution depending on your particular situation.
+> All of these three functions do the same thing, but are here to give you the best and fastest solution depending on your particular situation.## Installation
+
+## Installation
+
+```xml
+<dependency>
+    <!-- jTrack - Collecting Track Data @ https://github.com/ConnysCode/jTrack -->
+    <groupId>com.github.connyscode.ctils</groupId>
+    <artifactId>jtrack</artifactId>
+        <version>1.0.5.1</version>
+</dependency>
+```
+![Maven Central](https://img.shields.io/maven-central/v/com.github.connyscode.ctils/jtrack)
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
