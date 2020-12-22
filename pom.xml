@@ -4,7 +4,7 @@
 
     <groupId>com.github.connyscode.ctils</groupId>
     <artifactId>jtrack</artifactId>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>2.0.1</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>jTrack is a small and powerful library for collecting data of tracks.</description>
     <url>https://github.com/ConnysCode/jTrack</url>
@@ -22,7 +22,7 @@
         <connection>scm:git:ssh://git@github.com/ConnysCode/jTrack.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/ConnysCode/jTrack.git</developerConnection>
         <url>https://github.com/connyscode/jtrack</url>
-        <tag>jtrack-2.0.0</tag>
+        <tag>jtrack-2.0.1</tag>
     </scm>
 
     <build>
