@@ -68,7 +68,6 @@ Track track = client.getTrack(searchResults);
 System.out.println(track.songText());
 ```
 
-<br>
 
 ## Some tips
 ### Perform Search
