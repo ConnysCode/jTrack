@@ -36,6 +36,8 @@ System.out.println(track.artistName()); // Prints the Artist's Name
 System.out.println(track.artistDescription()); // Prints the Artist's Description
 ```
 
+#### Look at the JavaDocs <a href="https://connyscode.github.io/jTrack/">here</a>!
+
 ## Installation
 
 jTrack is a part of the Maven Central Repository. So you can easily use jTrack by adding this to your dependencies:
