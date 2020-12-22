@@ -23,15 +23,15 @@ List<SearchResult> searchResults = client.performSongSearch("Die Coolsten!");
 
 ### Read a Track
 ```Java
-Track track = client.getSong(searchResults.get(0));
-System.out.println(track.songLyrics()); // Prints the Lyrics
-System.out.println(track.songName()); // Prints the Song's Name
+Song song = client.getSong(searchResults.get(0));
+System.out.println(song.songLyrics()); // Prints the Lyrics
+System.out.println(song.songName()); // Prints the Song's Name
 ```
 
 ### Read an Artist
 ```Java
 Artist artist = client.getSong(1648251);
-Artist artist = client.getSong(track.artistGID());
+Artist artist = client.getSong(song.artistGID());
 System.out.println(track.artistName()); // Prints the Artist's Name
 System.out.println(track.artistDescription()); // Prints the Artist's Description
 ```
