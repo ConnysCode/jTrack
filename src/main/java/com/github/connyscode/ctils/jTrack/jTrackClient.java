@@ -48,7 +48,7 @@ public class jTrackClient {
     }
 
 
-    private Track GetSongDetails(long songID) throws SongNotFoundException {
+    private Song GetSongDetails(long songID) throws SongNotFoundException {
         return GeniusAPI.parseSong(songID, ACCESS_TOKEN);
     }
     private Artist GetArtistDetails(long artistID) throws ArtistNotFoundException {
@@ -60,9 +60,9 @@ public class jTrackClient {
      *
      * @param result A single SearchResult
      * @return The Track that holds all Info like: Author, Title, ...
-     * @see Track
+     * @see Song
      */
-    public Track getSong(SongSearchResult result) throws SongNotFoundException {
+    public Song getSong(SongSearchResult result) throws SongNotFoundException {
         return GetSongDetails(result.id);
     }
 
@@ -71,9 +71,9 @@ public class jTrackClient {
      *
      * @param songID A song ID
      * @return The Track that holds all Info like: Author, Title, ...
-     * @see Track
+     * @see Song
      */
-    public Track getSong(long songID) throws SongNotFoundException {
+    public Song getSong(long songID) throws SongNotFoundException {
         return GetSongDetails(songID);
     }
 
@@ -82,7 +82,7 @@ public class jTrackClient {
      *
      * @param artistGID An artistGID
      * @return The Track that holds all Info like: Author, Title, ...
-     * @see Track
+     * @see Song
      */
     public Artist getArtist(long artistGID) throws ArtistNotFoundException {
         return GetArtistDetails(artistGID);

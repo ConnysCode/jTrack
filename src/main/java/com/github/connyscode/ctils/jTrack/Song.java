@@ -5,7 +5,7 @@ import org.json.simple.JSONObject;
 
 import static com.github.connyscode.ctils.jTrack.backend.Messaging.*;
 
-public class Track {
+public class Song {
 
     private String songName = "", songFullName = "", songAuthor = "", songHeaderImageUrl = "https://genius.com/", songImageUrl = "https://genius.com/", songImageThumbnailUrl = "https://genius.com/", songReleaseDate = "", songText = "", songUrl = "https://genius.com/";
     private String albumName = "", albumFullName = "", albumAuthor = "", albumImageUrl = "https://genius.com/", albumUrl = "https://genius.com/";
@@ -17,9 +17,9 @@ public class Track {
      * Create a Track
      *
      * @param trackObject song response from genius
-     * @see Track
+     * @see Song
      */
-    public Track(JSONObject trackObject) {
+    public Song(JSONObject trackObject) {
         try {
 
 

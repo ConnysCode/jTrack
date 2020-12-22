@@ -1,7 +1,7 @@
 package com.github.connyscode.ctils.jTrack.backend;
 
 import com.github.connyscode.ctils.jTrack.Artist;
-import com.github.connyscode.ctils.jTrack.Track;
+import com.github.connyscode.ctils.jTrack.Song;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
@@ -47,7 +47,7 @@ public class GeniusAPI {
         }
     }
 
-    public static Track parseSong(long trackID, String ACCESS_TOKEN) throws SongNotFoundException {
+    public static Song parseSong(long trackID, String ACCESS_TOKEN) throws SongNotFoundException {
         try {
             OkHttpClient client = new OkHttpClient();
             Request request = new Request.Builder()
@@ -65,7 +65,7 @@ public class GeniusAPI {
                 JSONParser parse = new JSONParser();
                 JSONObject responseJSON = (JSONObject) ((JSONObject) parse.parse(response.body().string())).get("response");
 
-                return new Track((JSONObject) responseJSON.get("song"));
+                return new Song((JSONObject) responseJSON.get("song"));
             }
         } catch (IOException | ParseException e) {
             error("s01", "Song could not be recieved!");
