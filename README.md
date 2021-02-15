@@ -32,8 +32,8 @@ System.out.println(song.songName()); // Prints the Song's Name
 ```Java
 Artist artist = client.getSong(1648251);
 Artist artist = client.getSong(song.artistGID());
-System.out.println(track.artistName()); // Prints the Artist's Name
-System.out.println(track.artistDescription()); // Prints the Artist's Description
+System.out.println(artist.artistName()); // Prints the Artist's Name
+System.out.println(artist.artistDescription()); // Prints the Artist's Description
 ```
 
 #### Look at the JavaDocs <a href="https://connyscode.github.io/jTrack/">here</a>!
