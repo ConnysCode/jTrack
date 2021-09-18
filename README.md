@@ -92,7 +92,7 @@ track = client.getTrack(searchResults);         // "Gimme What I Want"
 track = client.getTrack(searchResults.get(1));  // "Gimme! Gimme! Gimme! (A Man After Midnight)"
 track = client.getTrack(searchResults, 2);      // "Gimme Gimme Gimme"
 ```
-> All of these three functions do the same thing, but are here to give you the best and fastest solution depending on your particular situation.## Installation
+> All of these three functions do the same thing, but are here to give you the best and fastest solution depending on your particular situation.
 
 ## Installation
 
